@@ -1,5 +1,8 @@
 package fr.humanbooster.poker.business;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Cette classe représente le concept de couleur : coeur, carreau, trèfle et pique
  * @author Franck
@@ -11,6 +14,7 @@ public class Couleur {
 	private Long id;
 	private String nom;
 	private String symbole;
+	private List<Carte> collecton = new ArrayList<>();
 	private static Long compteur = 0L;
 
 	//Consctructeurs
@@ -56,6 +60,14 @@ public class Couleur {
 
 	public void setSymbole(String symbole) {
 		this.symbole = symbole;
+	}
+
+	public List<Carte> getCollecton() {
+		return collecton;
+	}
+
+	public void setCollecton(List<Carte> collecton) {
+		this.collecton = collecton;
 	}
 
 	@Override

@@ -12,6 +12,7 @@ public class App {
 		ArrayList<Couleur> couleurs = new ArrayList<>();
 		ArrayList<Carte> cartes = new ArrayList<>();
 		
+		//Création des couleurs
 		Couleur couleur1 = new Couleur("Coeur");
 		couleurs.add(couleur1);
 		
@@ -24,8 +25,7 @@ public class App {
 		Couleur couleur4 = new Couleur("Trèfle");
 		couleurs.add(couleur4);
 		
-		System.out.println(couleurs);
-		
+		//Création des cartes pour chaque couleur
 		for (Couleur couleur : couleurs) {
 			for (int i = 2; i <= 14; i++) {
 				cartes.add(new Carte(i, couleur));
@@ -33,7 +33,6 @@ public class App {
 		}
 		
 		System.out.println(cartes);
-		
 	}
 
 }

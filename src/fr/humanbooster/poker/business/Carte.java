@@ -50,6 +50,7 @@ public class Carte {
 
 	/**
 	 * Accesseur pour récupérer la valeur de l'objet carte
+	 * 
 	 * @return
 	 */
 	public int getValeur() {
@@ -80,5 +81,5 @@ public class Carte {
 	public String toString() {
 		return nom + " de " + couleur.getNom();
 	}
-	
+
 }
