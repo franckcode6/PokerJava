@@ -21,7 +21,7 @@ public class Couleur {
 	
 	//Constructeur par défaut
 	public Couleur() {
-		id = ++compteur;
+		this.id = ++compteur;
 	}
 	
 	/**

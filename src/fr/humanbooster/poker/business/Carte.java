@@ -1,8 +1,6 @@
 package fr.humanbooster.poker.business;
 
-/**
- * 
- */
+
 public class Carte {
 
 	// Attribut(s)
