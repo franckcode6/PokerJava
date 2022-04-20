@@ -11,21 +11,24 @@ import fr.humanbooster.poker.business.Joueur;
 public class App {
 
 	public static void main(String[] args) {
-		// On déclare une collection d'objets de type Couleur
+		// On crée et mélange le jeu
 		List<Carte> cartes = creerJeu();
 		cartes = melangerCartes(cartes);
 
+		// On crée les joueurs
 		List<Joueur> joueurs = creerJoueur();
 
+		// Distribution des cartes
 		distribuerCartes(cartes, joueurs, 5);
-		
-		 for (Joueur joueur : joueurs) {
-			 System.out.println(joueur);
-		 }
+
+		// Affichage de chaque joueurs avec leur jeu respectif
+		for (Joueur joueur : joueurs) {
+			System.out.println(joueur);
+		}
 	}
 
 	/**
-	 * Création des couleurs
+	 * Création du jeu
 	 * 
 	 * @return
 	 */
@@ -51,7 +54,7 @@ public class App {
 				cartes.add(new Carte(i, couleur));
 			}
 		}
-		
+
 		return cartes;
 	}
 
@@ -68,11 +71,24 @@ public class App {
 		return joueurs;
 	}
 
+	/**
+	 * Mélanger les cartes
+	 * 
+	 * @param cartes
+	 * @return
+	 */
 	private static List<Carte> melangerCartes(List<Carte> cartes) {
 		Collections.shuffle(cartes);
 		return cartes;
 	}
-	
+
+	/**
+	 * Distribuer les cartes
+	 * 
+	 * @param cartes
+	 * @param joueurs
+	 * @param nbCartesADistribuer
+	 */
 	public static void distribuerCartes(List<Carte> cartes, List<Joueur> joueurs, int nbCartesADistribuer) {
 		for (int i = 0; i < nbCartesADistribuer; i++) {
 			for (Joueur joueur : joueurs) {
